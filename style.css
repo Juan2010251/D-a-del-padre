@@ -1,0 +1,117 @@
+body{
+    background-color: #f9f6df;
+}
+.base{
+    position:relative;
+    left:550px;
+    top:105px;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 2%;
+}
+.borde-izquierda{
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid rgb(0, 208, 255);
+    border-radius: 10px; /* Esto redondea los bordes */
+    position: relative;
+    left:526px;
+    top:-222px;
+    transform: rotate(90deg);
+}
+.borde-derecha{
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid rgb(0, 208, 255);
+    border-radius: 10px; /* Esto redondea los bordes */
+    position: relative;
+    left:674px;
+    top:-72px;
+    transform: rotate(-90deg);
+}
+.borde-inferior{
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid rgb(0, 155, 190);
+    border-radius: 10px; /* Esto redondea los bordes */
+    position: relative;
+    left:550px;
+    top:-296px;
+    transform: rotate(deg);
+}
+.papel {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    position: relative;
+    left: 550px;
+    top: -150px; /* Ajusta esto para acercar aún más el papel */
+    opacity: 0;
+    border-radius: 10%;
+    transition: top 1s ease, opacity 1s ease;
+}
+
+.papel p {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    padding-top: 50px;
+}
+
+.borde-superior {
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid rgb(0, 155, 190);
+    border-radius: 10px;
+    position: relative;
+    left: 550px;
+    top: -496px;
+    transform: rotate(-180deg);
+    transition: top 1s ease, transform 1s ease;
+}
+
+/* Animación al abrir la carta */
+.gift.abierta .borde-superior {
+    top: -280px; /* Ajusta la posición para acercar la carta */
+    transform: rotate(180deg); /* Rota el triángulo 180 grados */
+}
+
+.gift.abierta .papel {
+    top: -280px; /* El papel sube dentro de la caja */
+    opacity: 1; /* Hace visible el papel */
+}
+.button-open{
+    
+    position:relative;
+    left:600px;
+    top:-880px;
+}
+button{
+    border-radius: 5%;
+    width:200px;
+    height: 50px;
+    font-size: 24px;
+    background-color: rgb(0, 172, 0);
+    color:white
+}
+.title-container{
+ position:relative;
+ left:400px;
+ width: 620px;
+ border-style: solid;
+ border-color: black;
+ background-color: green;
+ color:white;
+ border-radius: 4%;
+}
+
+

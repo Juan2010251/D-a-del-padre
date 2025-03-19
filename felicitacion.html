@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡¡Felicidades!!</title>
+</head>
+<body>
+    <h1>"¡Feliz Día del Padre <span id="usuario"></span>! Hoy celebramos a todos los padres y figuras que nos enseñan, cuidan y apoyan con tanto amor. Gracias por tu dedicación, por ser fuente de inspiración y por estar siempre ahí cuando más se te necesita. ¡Que tengas un día lleno de alegría y bendiciones!"</h1>
+    <p>Que su hij@ que no le diga " Odio a mi papá ", mejor que diga:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/c8P_by-RJPE?si=EU10IQS8mJJOuPHq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Hoy es su día, ¡¡disfrútelo junto a su familia!!</h2>
+
+    <script>
+        // Recuperar el nombre del usuario desde localStorage
+        const usuario = localStorage.getItem('usuario');
+
+        // Si el nombre del usuario existe, actualizar el texto
+        if (usuario) {
+            document.getElementById('usuario').textContent = usuario;
+        } else {
+            document.getElementById('usuario').textContent = 'Usuario';
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            padding: 20px;
+            background-color: #e74c3c;
+            color: white;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #34495e;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        iframe {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .message-container {
+            margin-top: 50px;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>

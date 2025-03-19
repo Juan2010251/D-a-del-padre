@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día del Padre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .mensaje {
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="mensajeBienvenida">Para...</h1> <!-- Aquí aparecerá el mensaje de bienvenida -->
+
+        <form id="registroForm">
+            <label for="nombre">Ingresa tu nombre completo:</label>
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <button type="submit">Registrar</button>
+        </form>
+
+        <div id="mensajeDiaPadre" class="mensaje">
+            <!-- El mensaje con el nombre ingresado aparecerá aquí -->
+        </div>
+    </div>
+
+    <script>
+        // Obtener elementos del formulario y la parte del mensaje
+        const registroForm = document.getElementById('registroForm');
+        const nombreInput = document.getElementById('nombre');
+        const mensajeDiaPadre = document.getElementById('mensajeDiaPadre');
+        const mensajeBienvenida = document.getElementById('mensajeBienvenida');
+
+        // Escuchar el evento de envío del formulario
+        registroForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evitar que el formulario se envíe y recargue la página
+
+            const nombreUsuario = nombreInput.value.trim(); // Obtener el nombre ingresado
+
+            if (nombreUsuario) {
+                // Guardar el nombre en localStorage
+                localStorage.setItem('usuario', nombreUsuario);
+
+                // Mostrar el mensaje personalizado
+                mensajeBienvenida.textContent = `¡Hola, ${nombreUsuario}!`;
+                mensajeDiaPadre.innerHTML = `Espero que disfrute de su regalo ${nombreUsuario}, y que este día sea maravilloso para usted y su familia, su regalo se cargará en unos instantes.`;
+
+                // Limpiar el campo de entrada
+                nombreInput.value = '';
+            }
+             // Después de 4 segundos, redirigir a otra página
+    setTimeout(() => {
+        window.location.href = "felicitacion.html"; // Redirige a la página 'registro.html'
+    }, 14000); // 4000 milisegundos = 4 segundos
+});
+    </script>
+</body>
+</html>
